@@ -1,0 +1,2 @@
+#!/bin/sh
+$HOME/bitcoin-core/bin/stop.sh
