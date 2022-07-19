@@ -28,6 +28,7 @@ print_error() {
 start_bitcoin_core() {
     if [ ! -f $BLOCKCHAIN_FOLDER/bitcoind.pid ]; then
         #print_info "\n\nStarting Bitcoin Core..."
+        echo ""
         ./start.sh
 
         timer=0
@@ -37,8 +38,10 @@ start_bitcoin_core() {
         done
 
         if [ -f $BLOCKCHAIN_FOLDER/bitcoind.pid ]; then
-            print_warning "\nBlockchain files folder:"
-            echo $BLOCKCHAIN_FOLDER
+            print_warning "\n\nBlockchain files folder:"
+            echo "  $BLOCKCHAIN_FOLDER"
+	    print_warning "\nUse the command below to check the debug.log file."
+            echo "  ~/bitcoin-core/bin/debug.sh\n"
             print_success "\n\nOK! Bitcoin Core is running!"
         else
             print_error "Failed to start Bitcoin Core."
