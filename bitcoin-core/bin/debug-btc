@@ -1,3 +1,2 @@
 #!/bin/sh
-$HOME/bitcoin-core/bin/debug.sh
-#tail -f /storage/5200-FD0B/Android/data/com.termux/files/blockchain/debug.log
+$HOME/bitcoin-core/bin/debug-btc.sh
