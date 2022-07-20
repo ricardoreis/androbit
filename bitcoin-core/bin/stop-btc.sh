@@ -26,9 +26,9 @@ print_error() {
 }
 
 stop_bitcoin_core() {
-    if [ -f $BLOCKCHAIN_FOLDER//bitcoind.pid ]; then
+    if [ -f $BLOCKCHAIN_FOLDER/bitcoind.pid ]; then
         print_info "\nStopping Bitcoin Core.."
-        ./stop.sh
+        kill $(cat $BLOCKCHAIN_FOLDER/bitcoind.pid)
 
         timer=0
         until [ ! -f $BLOCKCHAIN_FOLDER/bitcoind.pid ] || [ $timer -eq 120 ]; do
