@@ -36,14 +36,23 @@ and Blockchain data files will be isntalled on your external drive.
 Layout of this  directory after the installation is shown below:
 
 Source files:
-   $HOME/bitcoin-core/bitcoin/
+```
+$HOME/bitcoin-core/bitcoin/
+```
 
 Binaries:
-   $HOME/bitcoin-core/bin/
+```
+$HOME/bitcoin-core/bin/
+```
 
 Configuration file:
-   $HOME/bitcoin-core/.bitcoin/bitcoin.conf
+```
+$HOME/bitcoin-core/.bitcoin/bitcoin.conf
+```
 
 Blockchain data files:
-   $HOME/bitcoin-core/.bitcoin/blocks
-   $HOME/bitcoin-core/.bitcoin/chainstate
+```
+/storage/your-external-drive/Android/data/com.termux/files/blockchain/
+/storage/your-external-drive/Android/data/com.termux/files/blockchain/blocks
+/storage/your-external-drive/Android/data/com.termux/files/blockchain/chainstate
+```
