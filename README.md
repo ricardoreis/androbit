@@ -52,7 +52,7 @@ $HOME/bitcoin-core/.bitcoin/bitcoin.conf
 
 Blockchain data files:
 ```
-/storage/your-external-drive/Android/data/com.termux/files/blockchain/
-/storage/your-external-drive/Android/data/com.termux/files/blockchain/blocks
-/storage/your-external-drive/Android/data/com.termux/files/blockchain/chainstate
+/storage/YOUR-EXTERNAL-DRIVE/Android/data/com.termux/files/blockchain/
+/storage/YOUR-EXTERNAL-DRIVE/Android/data/com.termux/files/blockchain/blocks
+/storage/YOUR-EXTERNAL-DRIVE/Android/data/com.termux/files/blockchain/chainstate
 ```
