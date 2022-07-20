@@ -28,8 +28,12 @@ print_error() {
 start_bitcoin_core() {
     if [ ! -f $BLOCKCHAIN_FOLDER/bitcoind.pid ]; then
         #print_info "\n\nStarting Bitcoin Core..."
-        echo ""
-        $HOME/bitcoin-core/bin/start.sh
+        if [ -f /root/bitcoin-core/bin/bitcoind ]; then
+            /root/bitcoin-core/bin/bitcoind -conf=$BLOCKCHAIN_FOLDER/bitcoin.conf -datadir=$BLOCKCHAIN_FOLDER -daemon
+            echo ""
+        fi
+        
+        #$HOME/bitcoin-core/bin/start.sh
 
         timer=0
         until [ -f $BLOCKCHAIN_FOLDER/bitcoind.pid ] || [ $timer -eq 5 ]; do
