@@ -29,7 +29,7 @@ start_bitcoin_core() {
     if [ ! -f $BLOCKCHAIN_FOLDER/bitcoind.pid ]; then
         #print_info "\n\nStarting Bitcoin Core..."
         echo ""
-        ./start.sh
+        $HOME/bitcoin-core/bin/start.sh
 
         timer=0
         until [ -f $BLOCKCHAIN_FOLDER/bitcoind.pid ] || [ $timer -eq 5 ]; do
