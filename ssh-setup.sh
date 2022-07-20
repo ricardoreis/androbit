@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pkg install openssh -y
-sshdpkg install iproute2 -y
+pkg install iproute2 -y
 sshd
 clear
 echo ""
