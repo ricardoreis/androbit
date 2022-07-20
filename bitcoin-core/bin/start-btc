@@ -1,3 +1,3 @@
 #!/bin/sh
-$HOME/bitcoin-core/bin/start.sh
+$HOME/bitcoin-core/bin/start-btc.sh
 

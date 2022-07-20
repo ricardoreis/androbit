@@ -647,7 +647,18 @@ uninstall_bitcoin_core() {
 }
 
 get_start_stop_debug_files(){
-
+    curl https://raw.githubusercontent.com/ricardoreis/androbit/master/bitcoin-core/bin/start-btc.sh -o $HOME/bitcoin-core/bin/start-btc.sh
+    curl https://raw.githubusercontent.com/ricardoreis/androbit/master/bitcoin-core/bin/stop-btc.sh -o $HOME/bitcoin-core/bin/stop-btc.sh
+    curl https://raw.githubusercontent.com/ricardoreis/androbit/master/bitcoin-core/bin/debug-btc.sh -o $HOME/bitcoin-core/bin/debug-btc.sh
+    curl https://raw.githubusercontent.com/ricardoreis/androbit/master/bitcoin-core/bin/start-btc -o /usr/local/bin/start-btc
+    curl https://raw.githubusercontent.com/ricardoreis/androbit/master/bitcoin-core/bin/stop-btc -o /usr/local/bin/stop-btc
+    curl https://raw.githubusercontent.com/ricardoreis/androbit/master/bitcoin-core/bin/debug-btc -o /usr/local/bin/debug-btc
+    chmod +x $HOME/bitcoin-core/bin/start-btc.sh
+    chmod +x $HOME/bitcoin-core/bin/stop-btc.sh
+    chmod +x $HOME/bitcoin-core/bin/debug-btc.sh
+    chmod +x /usr/local/bin/start-btc
+    chmod +x /usr/local/bin/stop-btc
+    chmod +x /usr/local/bin/debug-btc
 
 }
 
