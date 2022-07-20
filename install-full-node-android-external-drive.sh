@@ -19,7 +19,9 @@
 # Usage:
 #   Open your terminal and type:
 #
-#     curl https://bitnodes.io/install-full-node.sh | sh
+#     curl https://raw.githubusercontent.com/ricardoreis/androbit/master/install-full-node-android-external-drive.sh | sh
+#     or
+#     apt-get update && apt-get upgrade -y && apt install curl -y && curl https://raw.githubusercontent.com/ricardoreis/androbit/master/install-full-node-android-external-drive.sh | sh
 #
 # Bitcoin Core will be installed using binaries provided by bitcoin.org.
 #
@@ -142,19 +144,19 @@ Blockchain File Folder:
 
 Command To stop Bitcoin Core:
 
-    $HOME/bitcoin-core/bin/stop.sh
+    $HOME/bitcoin-core/bin/stop-btc.sh
     or 
     stop-btc
 
 Command To start Bitcoin Core again:
    
-    $HOME/bitcoin-core/bin/start.sh
+    $HOME/bitcoin-core/bin/start-btc.sh
     or
     start-btc
 
 Command To view Bitcoin Core log file:
 
-    $HOME/bitcoin-core/bin/debug.sh
+    $HOME/bitcoin-core/bin/debug-btc.sh
     or
     debug-btc
 
