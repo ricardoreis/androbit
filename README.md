@@ -17,16 +17,16 @@ For security reason, wallet functionality is not enabled by default.
  
  2 - Install Ubuntu on Termux
      Open your Termux terminal and type:
-'''
+```
 pkg upgrade && termux-setup-storage && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/repo-fix.sh > repo.sh && chmod +x repo.sh && bash repo.sh && atualização do pacote -y && pkg install wget curl proot tar -y && wget https://bitbrasil.com.br/sh/ubuntu20.sh -O ubuntu20.sh && chmod +x ubuntu20.sh && bash ubuntu20.sh
-'''
+```
  
  3 - Install Bitcoin Core on Ubuntu
  
    Open your Termux terminal and type:
-'''
+```
 apt-get update && apt-get upgrade -y && apt install curl -y && curl https://raw.githubusercontent.com/ricardoreis/androbit/master/install-full-node-android-external-drive.sh | sh
-'''
+```
 
 Bitcoin Core will be installed using binaries provided by bitcoin.org.
 
