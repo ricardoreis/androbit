@@ -2,7 +2,7 @@
 
 ###############################################################################
 #
-#                             install-full-node.sh
+#               install-full-node-adroid-external-drive.sh
 #
 # This is the install script for Bitcoin full node based on Bitcoin Core.
 #
@@ -717,7 +717,7 @@ After the installation, it may take several hours for your node to download a
 full copy of the blockchain.
 
 If you wish to uninstall Bitcoin Core later, you can download this script and
-run "sh install-full-node.sh -u" or run this shortcut command
+run "sh install-full-node-adroid-external-drive.sh -u" or run this shortcut command
 "sh <( curl -Ls https://bitnodes.io/install-full-node.sh ) -u"
 
 EOF

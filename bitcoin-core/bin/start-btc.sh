@@ -1,6 +1,5 @@
 #!/bin/sh
 BLOCKCHAIN_FOLDER=$(find /storage -type d -name "com.termux" 2>/dev/null)/files/blockchain
-#echo $BLOCKCHAIN_FOLDER
 BLUE='\033[94m'
 GREEN='\033[32;1m'
 YELLOW='\033[33;1m'
@@ -25,7 +24,22 @@ print_error() {
     sleep 1
 }
 
+check_pid() {
+    if [ -f $BLOCKCHAIN_FOLDER/bitcoind.pid ]; then
+        PID=$(cat $BLOCKCHAIN_FOLDER/bitcoind.pid)
+        if kill -0 $PID > /dev/null 2>&1
+            then
+                echo "$PID is running"
+                        # Do something knowing the pid exists, i.e. the process with $PID is runn>               
+                else
+                    #echo "$PID not running"
+                    rm $BLOCKCHAIN_FOLDER/bitcoind.pid
+                fi
+    fi
+}
+
 start_bitcoin_core() {
+    check_pid
     if [ ! -f $BLOCKCHAIN_FOLDER/bitcoind.pid ]; then
         #print_info "\n\nStarting Bitcoin Core..."
         if [ -f /root/bitcoin-core/bin/bitcoind ]; then
